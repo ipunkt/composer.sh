@@ -19,8 +19,7 @@ fi
 case $1 in
 	self-update)
 	UPGRADE_SCRIPT="/tmp/upgrade-composer.sh.$$"
-	wget
-	https://raw.githubusercontent.com/ipunkt/composer.sh/master/upgrade-composer.sh -O "$UPGRADE_SCRIPT"
+	wget https://raw.githubusercontent.com/ipunkt/composer.sh/master/upgrade-composer.sh -O "$UPGRADE_SCRIPT"
 	exec bash "$UPGRADE_SCRIPT" $0
 	;;
 	*)
