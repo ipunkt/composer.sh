@@ -22,6 +22,12 @@ case $1 in
 	wget https://raw.githubusercontent.com/ipunkt/composer.sh/master/upgrade-composer.sh -O "$UPGRADE_SCRIPT"
 	exec bash "$UPGRADE_SCRIPT" $0
 	;;
+	finish-update)
+	UPGRADE_SCRIPT="$1"
+	echo "Finishing update."
+	rm -i $1
+	exit
+	;;
 	*)
 		docker run $INTERACTIVE --rm --hostname php7 -e "LOCAL_USER_ID=$USERID" \
 			-e "COMPOSER_CACHE_DIR=/.composer" \
