@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-IMAGE="ipunktbs/php-composer:7.0.9-1.2.0"
+IMAGE="ipunktbs/php-composer:7.2.0-1.5.2"
 USERID=$(id -u)
 GROUPID=$(id -g)
 DIRECTORY="/user/src/admin-local-php7"
